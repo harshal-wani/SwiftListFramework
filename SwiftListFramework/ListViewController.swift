@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol ListHandler {
+public protocol ListHandler: NSObject {
     func submit(option: String)
     func close()
 }
 
 public class ListViewController: UIViewController {
     
-    var handler: ListHandler?
+    public var handler: ListHandler?
     
     public init(title: String) {
         super.init(nibName: nil, bundle: nil)
